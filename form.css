@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: var(--main-font);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font);
+  color: var(--text-color);
+  transition: background 0.3s ease;
+  
+  background-color: #121212;
+  background-image: radial-gradient(#444 1px, transparent 1px);
+  background-size: 30px 30px; /* spacing between dots */
+
+  animation: moveBg 120s linear infinite;
+}
+
+
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* transition: all 0.6s; */
+}
+
+
+
+:root {
+  /* DARK MODE */
+  --form-border: white;
+  --main-font: "Poppins", sans-serif;
+  --main-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  --main-text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4),
+    0px 7px 10px rgba(0, 0, 0, 0.15);
+  --darken: rgba(0, 0, 0, 0.7);
+  --text-color: white;
+  --bgc: url("assets/grid-blue.jpg");
+  --bgc-dark: url(assets/grid-blue.jpg);
+  --fourth-box: rgba(45, 47, 51, 0.452);
+  --main-color: black;
+}
+
+.toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 40px;
+  width: 50px;
+  border-radius: 5px;
+  font-family: var(--main-font);
+  font-weight: 500;
+  background-color: var(--main-color);
+  border: none;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--text-color);
+
+  & img {
+    filter: drop-shadow(0px 0px 20px blue);
+  }
+}
+
+section {
+  width: 90%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  color: var(--text-color);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--form-border);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--main-shadow);
+  text-shadow: var(--main-text-shadow);
+  background-color: var(--fourth-box);
+
+  & h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 1.9rem;
+    font-size: clamp(
+      1.9rem,
+      1.8199999999999998rem + 0.3999999999999999vw,
+      2.3rem
+    );
+  }
+
+  & button {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 10px;
+    font-family: var(--main-font);
+  }
+
+  & a {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
+    text-decoration-style: dashed;
+    color: var(--text-color);
+    text-underline-offset: 4px;
+    /* Increase this value as needed */
+    text-decoration-thickness: 2px;
+  }
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & input,
+  textarea {
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  & input {
+    height: 40px;
+  }
+
+  & textarea {
+    height: 80px;
+    max-height: 150px;
+    resize: vertical;
+    padding-top: 10px;
+    font-family: var(--main-font);
+  }
+}
