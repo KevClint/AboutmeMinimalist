@@ -12,3 +12,7 @@ notiH.onclick = function () {
     dropdown4.style.display = "none";
   }
 };
+
+
+const home = document.getElementById("show-home");
+const homeNoti = document.getElementById("notification1");
