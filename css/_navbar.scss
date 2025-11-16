@@ -88,43 +88,113 @@
 }
 
 /* MOBILE MENU */
-.mobile-menu {
-  display: none;
-  background: rgb(45, 47, 51);
-  z-index: 1000;
-  position: absolute;
-  top: 80px;
-  left: 10px;
+// .mobile-menu {
+//   display: none;
+//   background: rgb(45, 47, 51);
+//   z-index: 999;
+//   position: fixed;
+//   top: 80px;
+//   left: 10px;
+//   right: 10px;
+//   border-radius: 15px;
+//   height: fit-content;
+//   overflow: auto;
+
+//   &.active {
+//     display: block;
+//   }
+
+//   .mobile-item {
+//     display: block;
+//     padding: 0.6rem;
+//     color: white;
+//     background-color: blue;
+//     text-decoration: none;
+//   }
+
+//   .mobile-more-header {
+//     padding: 1rem;
+//     background: rgb(45, 47, 51);
+//     cursor: pointer;
+//   }
+
+//   .mobile-more-items {
+//     display: none;
+//     background: rgb(45, 47, 51);
+
+//     &.active {
+//       display: block;
+//     }
+//   }
+// }
+
+
+
+
+/* Fixed toggle button */
+.menu-toggle {
+  position: fixed;
+  top: 10px;
   right: 10px;
-  border-radius: 15px;
-
-  &.active {
-    display: block;
-  }
-
-  .mobile-item {
-    display: block;
-    padding: 0.8rem;
-    color: white;
-    text-decoration: none;
-  }
-
-  /* MOBILE MORE DROPDOWN */
-  .mobile-more-header {
-    padding: 1rem;
-    background: rgb(45, 47, 51);
-    cursor: pointer;
-  }
-
-  .mobile-more-items {
-    display: none;
-    background: rgb(45, 47, 51);
-
-    &.active {
-      display: block;
-    }
-  }
+  z-index: 1100;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
+.close-button {
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  margin: 10px;
+}
+/* Fixed mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* full screen height */
+  background-color: #333;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto; /* allow scrolling inside menu */
+  z-index: 1000;
+  padding-top: 10px; /* space for the toggle button */
+}
+
+.mobile-item {
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.mobile-item:hover {
+  background-color: #555;
+}
+
+/* Show menu with animation */
+.mobile-menu.show {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

@@ -26,8 +26,8 @@ const home = document.getElementById("show-home");
 const homeNoti = document.getElementById("notification1");
 
 
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
+// const hamburger = document.getElementById("hamburger");
+// const mobileMenu = document.getElementById("mobileMenu");
 
 const moreBtn = document.getElementById("moreBtn");
 const dropdownMenu = document.getElementById("dropdownMenu");
@@ -47,11 +47,28 @@ moreBtn.addEventListener("click", (e) => {
 });
 
 /* MOBILE MORE DROPDOWN */
-mobileMoreHeader.addEventListener("click", () => {
-  mobileMoreItems.classList.toggle("active");
-});
+// mobileMoreHeader.addEventListener("click", () => {
+//   mobileMoreItems.classList.toggle("active");
+// });
 
 /* CLOSE WHEN CLICK OUTSIDE */
 document.addEventListener("click", (e) => {
   if (!moreBtn.contains(e.target)) dropdownMenu.classList.remove("active");
 });
+
+
+
+
+// mobile view navbar
+const menuToggle = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.add("show");
+});
+
+closeMenu.addEventListener("click", () => {
+  mobileMenu.classList.remove("show");
+});
+
