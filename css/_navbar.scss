@@ -32,6 +32,14 @@
       text-decoration: none;
       font-size: 0.9rem;
       color: var(--link-white);
+      transition: all 0.2s;
+      padding: 2px;
+      border-radius: 5px;
+
+        &:hover {
+          transition: all 0.2s;
+          background-color: rgba(128, 128, 128, 0.774);
+        }
     }
   }
 
@@ -54,7 +62,7 @@
       top: 45px;
       right: 0;
       background: white;
-      min-width: 150px;
+      width: 200px;
       border-radius: 6px;
       display: none;
 
@@ -67,6 +75,12 @@
         padding: 0.7rem 1rem;
         color: black;
         text-decoration: none;
+        transition: all 0.2s;
+
+        &:hover {
+          transition: all 0.2s;
+          background-color: rgba(128, 128, 128, 0.774);
+        }
       }
     }
   }
@@ -110,6 +124,7 @@
   cursor: pointer;
   align-self: flex-end;
   margin: 10px;
+  padding-right: 10px;
 }
 /* Fixed mobile menu */
 .mobile-menu {
