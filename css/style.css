@@ -639,4 +639,5 @@ footer a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: drop-shadow(0px 0px 3px rgb(59, 130, 246));
 }/*# sourceMappingURL=style.css.map */
