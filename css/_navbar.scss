@@ -87,49 +87,6 @@
   }
 }
 
-/* MOBILE MENU */
-// .mobile-menu {
-//   display: none;
-//   background: rgb(45, 47, 51);
-//   z-index: 999;
-//   position: fixed;
-//   top: 80px;
-//   left: 10px;
-//   right: 10px;
-//   border-radius: 15px;
-//   height: fit-content;
-//   overflow: auto;
-
-//   &.active {
-//     display: block;
-//   }
-
-//   .mobile-item {
-//     display: block;
-//     padding: 0.6rem;
-//     color: white;
-//     background-color: blue;
-//     text-decoration: none;
-//   }
-
-//   .mobile-more-header {
-//     padding: 1rem;
-//     background: rgb(45, 47, 51);
-//     cursor: pointer;
-//   }
-
-//   .mobile-more-items {
-//     display: none;
-//     background: rgb(45, 47, 51);
-
-//     &.active {
-//       display: block;
-//     }
-//   }
-// }
-
-
-
 
 /* Fixed toggle button */
 .menu-toggle {
