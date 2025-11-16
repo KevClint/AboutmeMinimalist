@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import 'root';
+@import 'navbar';
 
 * {
   margin: 0;
@@ -7,25 +7,13 @@
   box-sizing: border-box;
   /* outline: 3px solid blueviolet; */
 }
-:root {
-  --open-sans-font:  "Poppins", sans-serif;
-  --space-mono-font: "Space Mono", monospace;
-  --inter-font: "Inter", sans-serif;
-
-  --main-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  --man-text-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
-  --gray-text: rgb(161, 161, 161);
-  --box-gray: rgb(45, 47, 51);
-
-  --nav-icon-bg: rgb(255, 255, 255);
-}
 html {
     scroll-behavior: smooth;
 }
 body {
   background-color: #121212;
   background-image: radial-gradient(#444 1px, transparent 1px);
-  background-size: 30px 30px; /* spacing between dots */
+  background-size: 30px 30px; 
 
   display: flex;
   justify-content: center;
@@ -119,7 +107,11 @@ body {
 main {
   width: 90%;
   max-width: 650px;
-  margin-top: 100px;
+  margin-top: 150px;
+
+  @media (width <= 425px  ) {
+    margin-top: 100px;
+  }
 }
 .container1 {
   display: flex;
@@ -190,6 +182,14 @@ main {
       color: black;
     }
   }
+}
+
+.myself {
+  display: flex;
+  justify-content: center;
+  border: 2px solid var(--gray-text);
+  border-radius: 15px;
+  border-bottom: 2px solid white;
 }
 
 .about-me {
@@ -445,3 +445,6 @@ footer {
     white-space: nowrap;
   }
 }
+
+
+/* Navbar */

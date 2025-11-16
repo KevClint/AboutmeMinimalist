@@ -1,0 +1,153 @@
+:root {
+  --link-white: white;
+  --bg-color-gray: gray;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color-gray);
+  color: var(--link-white);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--link-white);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--link-white);
+}
+
+/* DROPDOWN */
+.more-dropdown {
+  position: relative;
+  margin-left: 1rem;
+}
+
+.more-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--link-white);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  min-width: 150px;
+  border-radius: 6px;
+  display: none;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.7rem 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: none;
+  background: white;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  padding: 1rem 0;
+}
+
+.mobile-item {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* MOBILE MORE DROPDOWN */
+.mobile-more-header {
+  padding: 1rem;
+  background: #eee;
+  cursor: pointer;
+}
+
+.mobile-more-items {
+  display: none;
+  background: #fafafa;
+}
+
+/* CONTENT */
+.content {
+  margin-top: 100px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-menu,
+  .more-dropdown {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-more-items.active {
+    display: block;
+  }
+}
