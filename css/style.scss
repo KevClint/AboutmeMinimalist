@@ -106,7 +106,7 @@ body {
 
 main {
   width: 90%;
-  max-width: 650px;
+  max-width: 700px;
   margin-top: 150px;
 
   @media (width <= 425px  ) {
@@ -129,8 +129,10 @@ main {
   font-size: clamp(1.8rem, 1.3599999999999999rem + 2.2vw, 4rem);
   white-space: nowrap;
   font-weight: bold;
-  line-height: 4.5rem;
-
+  
+  @media (width >= 1439px) {
+    line-height: 4.5rem;
+  }
   @media (width <= 466px) {
     text-align: center;
     line-height: 2.5rem;

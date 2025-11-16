@@ -123,7 +123,7 @@
   font-size: 24px;
   border: none;
   cursor: pointer;
-  align-self: flex-start;
+  align-self: flex-end;
   margin: 10px;
 }
 
@@ -138,7 +138,7 @@
   flex-direction: column;
   overflow-y: auto; /* allow scrolling inside menu */
   z-index: 1000;
-  padding-top: 10px; /* space for the toggle button */
+  padding-top: 3px; /* space for the toggle button */
 }
 
 .mobile-item {
@@ -279,7 +279,7 @@ body {
 
 main {
   width: 90%;
-  max-width: 650px;
+  max-width: 700px;
   margin-top: 150px;
 }
 @media (width <= 425px) {
@@ -306,7 +306,11 @@ main {
   font-size: clamp(1.8rem, 1.36rem + 2.2vw, 4rem);
   white-space: nowrap;
   font-weight: bold;
-  line-height: 4.5rem;
+}
+@media (width >= 1439px) {
+  .name-title {
+    line-height: 4.5rem;
+  }
 }
 @media (width <= 466px) {
   .name-title {
