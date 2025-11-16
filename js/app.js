@@ -46,10 +46,6 @@ moreBtn.addEventListener("click", (e) => {
   dropdownMenu.classList.toggle("active");
 });
 
-/* MOBILE MORE DROPDOWN */
-// mobileMoreHeader.addEventListener("click", () => {
-//   mobileMoreItems.classList.toggle("active");
-// });
 
 /* CLOSE WHEN CLICK OUTSIDE */
 document.addEventListener("click", (e) => {
