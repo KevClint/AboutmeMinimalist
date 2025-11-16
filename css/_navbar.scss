@@ -92,11 +92,10 @@
   display: none;
   background: rgb(45, 47, 51);
   z-index: 1000;
-  position: fixed;
+  position: absolute;
   top: 80px;
-  left: 0;
-  right: 0;
-  padding: 1rem 0;
+  left: 10px;
+  right: 10px;
   border-radius: 15px;
 
   &.active {
@@ -105,7 +104,7 @@
 
   .mobile-item {
     display: block;
-    padding: 1rem;
+    padding: 0.8rem;
     color: white;
     text-decoration: none;
   }
@@ -125,13 +124,6 @@
       display: block;
     }
   }
-}
-
-/* CONTENT */
-.content {
-  margin-top: 100px;
-  padding: 2rem;
-  text-align: center;
 }
 
 /* RESPONSIVE */
