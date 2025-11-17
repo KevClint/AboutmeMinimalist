@@ -54,6 +54,9 @@
   margin-left: auto;
   gap: 1.5rem;
 }
+.navbar .nav-menu li:nth-child(1) a {
+  border-bottom: 2px solid white;
+}
 .navbar .nav-menu .nav-link {
   text-decoration: none;
   font-size: 0.9rem;

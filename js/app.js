@@ -25,10 +25,6 @@ if (notiH) {
 const home = document.getElementById("show-home");
 const homeNoti = document.getElementById("notification1");
 
-
-// const hamburger = document.getElementById("hamburger");
-// const mobileMenu = document.getElementById("mobileMenu");
-
 const moreBtn = document.getElementById("moreBtn");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
