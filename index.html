@@ -36,60 +36,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="#" class="brand">Clint Lorenzo</a>
-
-        <ul class="nav-menu">
-            <li><a href="#" class="nav-link">HOME</a></li>
-            <li><a href="#" class="nav-link">PREFACE</a></li>
-            <li><a href="#" class="nav-link">WORK IMMERSION</a></li>
-            <li><a href="#" class="nav-link">SIS</a></li>
-        </ul>
-
-        <div class="more-dropdown">
-            <button id="moreBtn" class="more-btn">More ▼</button>
-            <div id="dropdownMenu" class="dropdown-menu">
-                <a href="#" class="dropdown-item">RESUME</a>
-                <a href="#" class="dropdown-item">APPLICATION</a>
-                <a href="#" class="dropdown-item">JOB INTERVIEW</a>
-                <a href="#" class="dropdown-item">COMPANY RULES</a>
-                <a href="#" class="dropdown-item">WORK IMMERSION TASK</a>
-                <a href="#" class="dropdown-item">DTR</a>
-                <a href="#" class="dropdown-item">PERSONAL T1</a>
-                <a href="#" class="dropdown-item">UPDATED RESUME</a>
-                <a href="#" class="dropdown-item">WORK IMMERSION HIGHLIGHT</a>
-                <a href="#" class="dropdown-item">REFLECTION</a>
-                <a href="#" class="dropdown-item">PHOTO COLLAGE</a>
-                <a href="#" class="dropdown-item">CERTIFICATE</a>
-                <a href="#" class="dropdown-item">REMARKS</a>
-            </div>
-        </div>
-
-        <div id="hamburger" class="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-    </nav>
-
-    <div id="mobileMenu" class="mobile-menu">
-        <button id="closeMenu" class="close-button">✖</button>
-        <a href="#" class="mobile-item">Home</a>
-        <a href="#" class="mobile-item">PREFACE</a>
-        <a href="#" class="mobile-item">WORK IMMERSION</a>
-        <a href="#" class="mobile-item">SIS</a>
-        <a href="#" class="mobile-item">RESUME</a>
-        <a href="#" class="mobile-item">APPLICATION</a>
-        <a href="#" class="mobile-item">JOB INTERVIEW</a>
-        <a href="#" class="mobile-item">COMPANY RULES</a>
-        <a href="#" class="mobile-item">WORK IMMERSION TASK</a>
-        <a href="#" class="mobile-item">DTR</a>
-        <a href="#" class="mobile-item">PERSONAL T1</a>
-        <a href="#" class="mobile-item">UPDATED RESUME</a>
-        <a href="#" class="mobile-item">WORK IMMERSION HIGHLIGHT</a>
-        <a href="#" class="mobile-item">REFLECTION</a>
-        <a href="#" class="mobile-item">PHOTO COLLAGE</a>
-        <a href="#" class="mobile-item">CERTIFICATE</a>
-        <a href="#" class="mobile-item">REMARKS</a>
-    </div>
+    <div id="header"></div>
 
     <nav class="sidebar">
         <ul>
@@ -341,64 +288,12 @@
             <div id="map" class="map-map" style="height: 350px; width: 100%; border-radius: 12px;"></div>
         </section>
 
-        
-
-        <!-- <article class="social-media-link">
-            <a href="https://github.com/KevClint" class="box-link box-link1" style="opacity: 0;">
-                <img src="assets/icons/github-brands.svg" alt="github icon" width="20" />
-                <p>Github</p>
-            </a>
-            <a href="https://www.facebook.com/Clint.Lawrenze" class="box-link box-link2" style="opacity: 0;">
-                <img src="assets/icons/facebook-brands.svg" alt="facebook icon" width="20" />
-                <p>Facebook</p>
-            </a>
-            <a href="" class="box-link box-link3" style="opacity: 0;">
-                <img src="assets/icons/youtube-brands.svg" alt="youtube icon" width="20" />
-                <p>Youtube</p>
-            </a>
-        </article> -->
-
         <section class="contact-me">
             <p>Thanks For Scrolling</p>
             <a href="/contact/form.html">Contact Me <img src="assets/icons/link.svg" alt="link icon" /></a>
         </section>
 
-        <footer>
-            <div class="container">
-                <div class="header-info">
-                    <a href="#home">Home</a>
-                    <a href="#aboutme">Aboutme</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#education">Education</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="socials">
-                    <a href="https://www.facebook.com/Clint.Lawrenze/">
-                        <i class="fa-brands fa-stack-overflow"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@Clintxplayz">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="https://stackoverflow.com/users/28474690/kevlarclint">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://github.com/KevlarClint">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </div>
-                <div class="rights">
-                    <p class="top-rights">©2025 Clint Lorenzo. All rights reserved.</p>
-                    <p class="last-rights">
-                        Build Using
-                        <i class="fa-brands fa-html5 rightsicon" style="color: #ff7b00;"></i>
-                        <i class="fa-brands fa-css3-alt rightsicon" style="color: #74C0FC;"></i>
-                        and
-                        <i class="fa-brands fa-js rightsicon" style="color: #FFD43B;"></i>
-                    </p>
-                </div>
-            </div>
-        </footer>
+        <div id="footer"></div>
     </main>
 
     <script src="/js/app.js"></script>
@@ -409,6 +304,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://kit.fontawesome.com/25836a1afd.js" crossorigin="anonymous"></script>
+    <script src="/src/Reuse/load-header-footer.js"></script>
 </body>
 
 </html>

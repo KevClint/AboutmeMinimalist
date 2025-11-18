@@ -1,0 +1,271 @@
+@import "root";
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  backdrop-filter: blur(20px);
+  background-color: rgb(45, 47, 51);
+  border-radius: 0 0 15px 15px;
+  z-index: 1000;
+
+  .brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--link-white);
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    gap: 1.5rem;
+
+    li:nth-child(1) a {
+      border-bottom: 2px solid white;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--link-white);
+      transition: all 0.2s;
+      padding: 2px;
+      border-radius: 5px;
+
+      &:hover {
+        transition: all 0.2s;
+        background-color: rgba(128, 128, 128, 0.774);
+      }
+    }
+  }
+
+  /* DROPDOWN */
+  .more-dropdown {
+    position: relative;
+    margin-left: 1rem;
+
+    .more-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--link-white);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background: white;
+      width: 200px;
+      border-radius: 6px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .dropdown-item {
+        display: block;
+        padding: 0.7rem 1rem;
+        color: black;
+        text-decoration: none;
+        transition: all 0.2s;
+
+        &:hover {
+          transition: all 0.2s;
+          background-color: rgba(128, 128, 128, 0.774);
+        }
+      }
+    }
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: auto;
+    cursor: pointer;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+  }
+}
+
+/* Fixed toggle button */
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1100;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.close-button {
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px;
+  padding-right: 10px;
+}
+/* Fixed mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* full screen height */
+  background-color: #333;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto; /* allow scrolling inside menu */
+  z-index: 1000;
+  padding-top: 3px; /* space for the toggle button */
+}
+
+.mobile-item {
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.mobile-item:hover {
+  background-color: #555;
+}
+
+/* Show menu with animation */
+.mobile-menu.show {
+  display: flex;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    .nav-menu,
+    .more-dropdown {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+}
+
+
+
+
+/* footer or tiil sa webiste */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-top: 10px;
+
+  & .container {
+    width: 90%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: white;
+
+    & .header-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      & a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    & .socials {
+      display: inline-flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 2rem;
+      text-decoration: none;
+
+      & a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border-radius: 7px;
+        padding: 10px;
+        padding-inline: 20px;
+        background-color: rgba(177, 177, 177, 0.24);
+        filter: drop-shadow(0px 0px 1px);
+      }
+      & a:nth-child(1) {
+        color: yellow;
+      }
+      & a:nth-child(2) {
+        color: red;
+      }
+      & a:nth-child(3) {
+        color: blue;
+      }
+      & a:nth-child(4) {
+        color: black;
+      }
+    }
+    & .rights {
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      visibility: inherit;
+      text-align: center;
+
+      & .last-rights {
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      & .rightsicon {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
