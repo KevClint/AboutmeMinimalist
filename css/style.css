@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --open-sans-font: "Poppins", sans-serif;
   --space-mono-font: "Space Mono", monospace;
@@ -194,6 +196,26 @@
     display: flex;
   }
 }
+:root {
+  --open-sans-font: "Poppins", sans-serif;
+  --space-mono-font: "Space Mono", monospace;
+  --inter-font: "Inter", sans-serif;
+  --main-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  --man-text-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+  --gray-text: rgb(197, 197, 197);
+  --box-gray: rgb(45, 47, 51);
+  --nav-icon-bg: rgb(255, 255, 255);
+}
+
+.map-api {
+  margin-block: 20px;
+}
+.map-api p {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -610,6 +632,7 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  border-top: solid 2px var(--gray-text);
   border-bottom: 2px solid var(--gray-text);
 }
 @media (width <= 466px) {

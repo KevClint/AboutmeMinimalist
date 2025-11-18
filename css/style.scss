@@ -1,5 +1,6 @@
 @import 'root';
 @import 'navbar';
+@import 'map';
 
 * {
   margin: 0;
@@ -422,6 +423,7 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  border-top: solid 2px var(--gray-text);
   border-bottom: 2px solid var(--gray-text);
 
   @media (width <= 466px) {
