@@ -124,16 +124,17 @@
     <main id="home">
         <div class="container1">
             <article class="status">
-                <img src="assets/icons/dot.png" alt="green-dot icon" />
-                <p>Online.</p>
+                <div class="status-box">
+                    <img src="assets/icons/dot.png" alt="green-dot icon" />
+                    <p>Online.</p>
+                </div>
+                <div id="clock">--:--:--</div>
             </article>
 
             <article class="name-title">
                 <p>Hi, I'm Clint</p>
                 <p>This is my E-Portfolio.</p>
             </article>
-
-            
 
             <article class="myself">
                 <img src="assets/images/clint-pic.png" alt="mah self duh" class="me-pic">
@@ -162,6 +163,10 @@
                 </p>
             </article>
         </div>
+
+        <section class="my-achivements">
+         <p>My Achievements</p>
+        </section>
 
         <section class="timeline-section" id="educ">
             <h2>My Timeline</h2>
@@ -333,12 +338,10 @@
 
         <section class="map-api">
             <p>This is where i live</p>
-            <div id="map" style="height: 350px; width: 100%; border-radius: 12px;"></div>
+            <div id="map" class="map-map" style="height: 350px; width: 100%; border-radius: 12px;"></div>
         </section>
 
-        <section class="my-hobby"> 
-            
-        </section>
+        
 
         <!-- <article class="social-media-link">
             <a href="https://github.com/KevClint" class="box-link box-link1" style="opacity: 0;">
@@ -355,9 +358,46 @@
             </a>
         </article> -->
 
-        <footer>
+        <section class="contact-me">
             <p>Thanks For Scrolling</p>
             <a href="/contact/form.html">Contact Me <img src="assets/icons/link.svg" alt="link icon" /></a>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="header-info">
+                    <a href="#home">Home</a>
+                    <a href="#aboutme">Aboutme</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="socials">
+                    <a href="https://www.facebook.com/Clint.Lawrenze/">
+                        <i class="fa-brands fa-stack-overflow"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Clintxplayz">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://stackoverflow.com/users/28474690/kevlarclint">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://github.com/KevlarClint">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <div class="rights">
+                    <p class="top-rights">©2025 Clint Lorenzo. All rights reserved.</p>
+                    <p class="last-rights">
+                        Build Using
+                        <i class="fa-brands fa-html5 rightsicon" style="color: #ff7b00;"></i>
+                        <i class="fa-brands fa-css3-alt rightsicon" style="color: #74C0FC;"></i>
+                        and
+                        <i class="fa-brands fa-js rightsicon" style="color: #FFD43B;"></i>
+                    </p>
+                </div>
+            </div>
         </footer>
     </main>
 
@@ -368,6 +408,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://kit.fontawesome.com/25836a1afd.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

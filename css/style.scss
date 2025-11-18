@@ -1,6 +1,8 @@
 @import 'root';
 @import 'navbar';
 @import 'map';
+@import 'footer';
+@import 'achi';
 
 * {
   margin: 0;
@@ -123,7 +125,14 @@ main {
 .status {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-weight: bold;
+
+  .status-box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .name-title {
   font-size: 1.8rem;
@@ -206,12 +215,14 @@ main {
 
 .timeline-section {
   padding: 5px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 2px solid var(--gray-text);
   border-bottom: 2px solid var(--gray-text);
 
   & h2 {
     font-size: 1.8rem;
     margin-bottom: 30px;
+    margin-top: 20px;
 
     @media (width <= 466px) {
       text-align: center;
@@ -415,7 +426,7 @@ main {
   }
 }
 
-footer {
+.contact-me {
   display: flex;
   flex-direction: column;
   justify-content: center;

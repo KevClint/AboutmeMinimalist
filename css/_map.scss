@@ -1,11 +1,18 @@
-@import 'root';
+@import "root";
 
 .map-api {
-    margin-block: 20px;
+  margin-block: 30px;
 
-    p {
-        margin-bottom: 20px;
-        font-size: 1.7rem;
-        font-weight: bold;
+  .map-map {
+    z-index: 1;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    @media (width <= 466px) {
+      text-align: center;
     }
+  }
 }

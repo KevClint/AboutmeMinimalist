@@ -1,0 +1,12 @@
+@import 'root';
+
+.my-achivements {
+    margin-top: 20px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    @media (width <= 466px) {
+      text-align: center;
+    }
+}

@@ -4,6 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 :root {
   --open-sans-font: "Poppins", sans-serif;
   --space-mono-font: "Space Mono", monospace;
@@ -208,12 +212,131 @@
 }
 
 .map-api {
-  margin-block: 20px;
+  margin-block: 30px;
+}
+.map-api .map-map {
+  z-index: 1;
 }
 .map-api p {
   margin-bottom: 20px;
   font-size: 1.7rem;
   font-weight: bold;
+}
+@media (width <= 466px) {
+  .map-api p {
+    text-align: center;
+  }
+}
+
+:root {
+  --open-sans-font: "Poppins", sans-serif;
+  --space-mono-font: "Space Mono", monospace;
+  --inter-font: "Inter", sans-serif;
+  --main-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  --man-text-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+  --gray-text: rgb(197, 197, 197);
+  --box-gray: rgb(45, 47, 51);
+  --nav-icon-bg: rgb(255, 255, 255);
+}
+
+/* footer or tiil sa webiste */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  margin-top: 10px;
+}
+footer .container {
+  width: 90%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+}
+footer .container .header-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer .container .header-info a {
+  text-decoration: none;
+  color: white;
+}
+footer .container .socials {
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 2rem;
+  text-decoration: none;
+}
+footer .container .socials a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 10px;
+  padding-inline: 20px;
+  background-color: rgba(177, 177, 177, 0.24);
+  filter: drop-shadow(0px 0px 1px);
+}
+footer .container .socials a:nth-child(1) {
+  color: yellow;
+}
+footer .container .socials a:nth-child(2) {
+  color: red;
+}
+footer .container .socials a:nth-child(3) {
+  color: blue;
+}
+footer .container .socials a:nth-child(4) {
+  color: black;
+}
+footer .container .rights {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  visibility: inherit;
+  text-align: center;
+}
+footer .container .rights .last-rights {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .container .rights .rightsicon {
+  font-size: 1.5rem;
+}
+
+:root {
+  --open-sans-font: "Poppins", sans-serif;
+  --space-mono-font: "Space Mono", monospace;
+  --inter-font: "Inter", sans-serif;
+  --main-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  --man-text-shadow: 0 0 10px rgba(0, 0, 0, 0.192);
+  --gray-text: rgb(197, 197, 197);
+  --box-gray: rgb(45, 47, 51);
+  --nav-icon-bg: rgb(255, 255, 255);
+}
+
+.my-achivements {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+@media (width <= 466px) {
+  .my-achivements {
+    text-align: center;
+  }
 }
 
 * {
@@ -336,7 +459,13 @@ main {
 .status {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-weight: bold;
+}
+.status .status-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name-title {
@@ -423,12 +552,14 @@ main {
 
 .timeline-section {
   padding: 5px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 2px solid var(--gray-text);
   border-bottom: 2px solid var(--gray-text);
 }
 .timeline-section h2 {
   font-size: 1.8rem;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 @media (width <= 466px) {
   .timeline-section h2 {
@@ -624,7 +755,7 @@ main {
   font-weight: bold;
 }
 
-footer {
+.contact-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -636,15 +767,15 @@ footer {
   border-bottom: 2px solid var(--gray-text);
 }
 @media (width <= 466px) {
-  footer {
+  .contact-me {
     align-items: center;
   }
 }
-footer p {
+.contact-me p {
   font-size: 1.5rem;
   font-weight: bold;
 }
-footer a {
+.contact-me a {
   text-decoration: none;
   height: 45px;
   border-radius: 20px;
