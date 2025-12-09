@@ -1,7 +1,6 @@
 @import 'root';
 @import 'navbar';
 @import 'map';
-@import 'footer';
 @import 'achi';
 
 * {
@@ -275,15 +274,18 @@ main {
   }
 }
 
+@mixin h2tite-style {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
 .projects {
   padding-inline: 5px;
-  padding-bottom: 30px;
-
+  padding-bottom: 20px;
   border-bottom: 2px solid var(--gray-text);
 
   & h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+    @include h2tite-style();
 
     @media (width <= 466px) {
       text-align: center;
@@ -331,12 +333,11 @@ main {
 
 .skills {
   padding-inline: 5px;
-  padding-block: 30px;
+  padding-block: 20px;
   border-bottom: 2px solid var(--gray-text);
 
   & h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+    @include h2tite-style();
 
     @media (width <= 466px) {
       text-align: center;
@@ -381,12 +382,11 @@ main {
 
 .uses {
   padding-inline: 5px;
-  padding-block: 30px;
+  padding-block: 20px;
   border-bottom: 2px solid var(--gray-text);
 
   & h2 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+    @include h2tite-style();
 
     @media (width <= 466px) {
       text-align: center;
@@ -436,14 +436,15 @@ main {
   gap: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--gray-text);
 
   @media (width <= 466px) {
     align-items: center;
   }
 
   & p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
   }
   & a {
