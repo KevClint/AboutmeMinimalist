@@ -1,5 +1,15 @@
 @import "root";
 
+@mixin borderbottomstyle() {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),   /* fully transparent at left */
+    rgba(255, 255, 255, 0.418),   /* solid in the middle */
+    rgba(255, 0, 0, 0)    /* fully transparent at right */
+  ) 1;
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -11,9 +21,10 @@
   align-items: center;
   padding: 0 2rem;
   backdrop-filter: blur(20px);
-  background-color: rgb(45, 47, 51);
-  border-radius: 0 0 15px 15px;
+  background-color: 	rgb(45, 47, 51);
+  border-radius: 0 0 10px 10px;
   z-index: 1000;
+  @include borderbottomstyle();
 
   .brand {
     font-size: 1.4rem;

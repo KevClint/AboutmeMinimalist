@@ -3,6 +3,73 @@
 @import 'map';
 @import 'achi';
 
+@mixin h2tite-style {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+@mixin borderbottomstyle() {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),   /* fully transparent at left */
+    rgba(255, 255, 255, 0.418),   /* solid in the middle */
+    rgba(255, 0, 0, 0)    /* fully transparent at right */
+  ) 1;
+}
+@mixin bordertoptyle() {
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),   /* fully transparent at left */
+    rgba(255, 255, 255, 0.418),   /* solid in the middle */
+    rgba(255, 0, 0, 0)    /* fully transparent at right */
+  ) 1;
+}
+
+@mixin border-left-style($color: white, $thickness: 1px) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $thickness;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      rgba($color, 0.6),
+      rgba($color, 0),
+      rgba($color, 0.6)
+    );
+  }
+}
+
+@mixin border-right-style($color: white, $thickness: 1px) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: $thickness;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      rgba($color, 0.6),
+      rgba($color, 0),
+      rgba($color, 0.6)
+    );
+  }
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +111,7 @@ body {
   left: 70px;
   transform: translate(-50%, -50%);
   border-radius: 40px;
+  border: solid gray 1px ;
 
   @media (width <= 900px) {
     display: none;
@@ -119,7 +187,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: var(--gray-text) solid 2px;
+  @include borderbottomstyle();
 }
 .status {
   display: flex;
@@ -200,14 +268,18 @@ main {
 }
 
 .myself {
+  z-index: 2;
+  border-block: gray 1px solid;
+  @include border-left-style(white, 1px);
+  @include border-right-style(white, 1px);
+}
+.myself-cont {
   display: flex;
   justify-content: center;
-  border: 2px solid var(--gray-text);
-  border-radius: 15px;
-  border-bottom: 2px solid white;
 }
 
 .about-me {
+  border-radius: 20px;
   margin: 5px;
   font-size: 1rem;
   font-size: clamp(1rem, 0.92rem + 0.3999999999999999vw, 1.4rem);
@@ -220,7 +292,7 @@ main {
 .timeline-section {
   padding: 5px;
   margin-bottom: 20px;
-  border-bottom: 2px solid var(--gray-text);
+  @include borderbottomstyle();
 
   & h2 {
     font-size: 1.8rem;
@@ -275,15 +347,12 @@ main {
   }
 }
 
-@mixin h2tite-style {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
+
 
 .projects {
   padding-inline: 5px;
   padding-bottom: 20px;
-  border-bottom: 2px solid var(--gray-text);
+  @include borderbottomstyle();
 
   & h2 {
     @include h2tite-style();
@@ -335,7 +404,7 @@ main {
 .skills {
   padding-inline: 5px;
   padding-block: 20px;
-  border-bottom: 2px solid var(--gray-text);
+  @include borderbottomstyle();
 
   & h2 {
     @include h2tite-style();
@@ -384,7 +453,7 @@ main {
 .uses {
   padding-inline: 5px;
   padding-block: 20px;
-  border-bottom: 2px solid var(--gray-text);
+  @include borderbottomstyle();
 
   & h2 {
     @include h2tite-style();
@@ -438,7 +507,7 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: 2px solid var(--gray-text);
+  @include borderbottomstyle();
 
   @media (width <= 466px) {
     align-items: center;
