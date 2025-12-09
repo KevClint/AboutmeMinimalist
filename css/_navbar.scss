@@ -38,11 +38,11 @@
       color: var(--link-white);
       transition: all 0.2s;
       padding: 2px;
-      border-radius: 5px;
 
       &:hover {
         transition: all 0.2s;
         background-color: rgba(128, 128, 128, 0.774);
+        border-radius: 3px;
       }
     }
   }
