@@ -53,6 +53,10 @@ main {
   }
 }
 
+.navbar .nav-menu li:nth-child(2) a {
+  border-bottom: 2px solid white;
+}
+
 .about-title {
   text-align: center;
   padding-block: 20px;

@@ -129,9 +129,12 @@ main {
   font-weight: bold;
 
   .status-box {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    gap: 5px;
+
+    img {
+      width: 30px;
+    }
   }
 }
 .name-title {
@@ -211,6 +214,7 @@ main {
   padding-bottom: 20px;
   color: white;
   text-shadow: var(--main-text-shadow);
+  text-align: justify;
 }
 
 .timeline-section {
@@ -274,7 +278,7 @@ main {
 
 .projects {
   padding-inline: 5px;
-  padding-block: 30px;
+  padding-bottom: 30px;
 
   border-bottom: 2px solid var(--gray-text);
 
@@ -434,7 +438,6 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-top: solid 2px var(--gray-text);
   border-bottom: 2px solid var(--gray-text);
 
   @media (width <= 466px) {

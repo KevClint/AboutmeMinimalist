@@ -37,12 +37,13 @@
       font-size: 0.9rem;
       color: var(--link-white);
       transition: all 0.2s;
-      padding: 2px;
-      border-radius: 5px;
+      padding-inline: 3px;
+      padding-block: 2px;
 
       &:hover {
         transition: all 0.2s;
         background-color: rgba(128, 128, 128, 0.774);
+        border-radius: 3px;
       }
     }
   }
@@ -265,6 +266,10 @@ footer {
       }
       & .rightsicon {
         font-size: 1.5rem;
+      }
+      & .idksicon {
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
   }

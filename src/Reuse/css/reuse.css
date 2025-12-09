@@ -46,12 +46,13 @@
   font-size: 0.9rem;
   color: var(--link-white);
   transition: all 0.2s;
-  padding: 2px;
-  border-radius: 5px;
+  padding-inline: 3px;
+  padding-block: 2px;
 }
 .navbar .nav-menu .nav-link:hover {
   transition: all 0.2s;
   background-color: rgba(128, 128, 128, 0.774);
+  border-radius: 3px;
 }
 .navbar .more-dropdown {
   position: relative;
@@ -253,4 +254,8 @@ footer .container .rights .last-rights {
 }
 footer .container .rights .rightsicon {
   font-size: 1.5rem;
+}
+footer .container .rights .idksicon {
+  width: 1.5rem;
+  height: 1.5rem;
 }/*# sourceMappingURL=reuse.css.map */

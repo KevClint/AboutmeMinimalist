@@ -463,9 +463,11 @@ main {
   font-weight: bold;
 }
 .status .status-box {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+.status .status-box img {
+  width: 30px;
 }
 
 .name-title {
@@ -548,6 +550,7 @@ main {
   padding-bottom: 20px;
   color: white;
   text-shadow: var(--main-text-shadow);
+  text-align: justify;
 }
 
 .timeline-section {
@@ -604,7 +607,7 @@ main {
 
 .projects {
   padding-inline: 5px;
-  padding-block: 30px;
+  padding-bottom: 30px;
   border-bottom: 2px solid var(--gray-text);
 }
 .projects h2 {

@@ -1,5 +1,4 @@
-@import 'root';
-
+@import "root";
 
 * {
   margin: 0;
@@ -8,12 +7,12 @@
   /* outline: 3px solid blueviolet; */
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #121212;
   background-image: radial-gradient(#444 1px, transparent 1px);
-  background-size: 30px 30px; 
+  background-size: 30px 30px;
 
   display: flex;
   justify-content: center;
@@ -37,12 +36,18 @@ main {
   max-width: 700px;
   margin-top: 150px;
 
-  @media (width <= 425px  ) {
+  @media (width <= 425px) {
     margin-top: 100px;
   }
 }
 
-// additional
+
+// HEADER NAV - 
+.navbar .nav-menu li:nth-child(2) a {
+  border-bottom: 2px solid white;
+}
+
+// PAGE TITE
 .about-title {
   text-align: center;
   padding-block: 20px;
