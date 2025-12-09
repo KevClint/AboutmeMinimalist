@@ -82,15 +82,27 @@ html {
 body {
   background-color: #121212;
   background-image: radial-gradient(#444 1px, transparent 1px);
-  background-size: 30px 30px; 
+  background-size: 30px 30px;
+  animation: moveBg 200s linear infinite;
 
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--open-sans-font);
   color: white;
-  animation: moveBg 200s linear infinite;
+
+  position: relative;
 }
+
+body::before {
+  content: "";
+  position: fixed;   
+  inset: 0;
+  background: inherit;
+  filter: blur(1.5px);
+  z-index: -1;      
+}
+
 @keyframes moveBg {
   0% {
     background-position: 0% 0%;
