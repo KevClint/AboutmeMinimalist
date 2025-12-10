@@ -4,7 +4,6 @@ fetch("/src/Reuse/header.html")
   .then((html) => {
     document.getElementById("header").innerHTML = html;
 
-    // ---- RUN YOUR HEADER JS HERE ----
     initHeaderScripts();
   });
 
