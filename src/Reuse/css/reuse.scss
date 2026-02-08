@@ -10,94 +10,33 @@
   ) 1;
 }
 
-/* NAVBAR */
+/* NAVBAR - APPLE STYLE */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 2rem;
-  backdrop-filter: blur(20px);
-  background-color: 	rgb(45, 47, 51);
-  border-radius: 0 0 10px 10px;
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  @include borderbottomstyle();
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 
   .brand {
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 500;
     text-decoration: none;
-    color: var(--link-white);
-  }
+    color: #000;
+    letter-spacing: -0.02em;
+    transition: opacity 0.3s ease;
 
-  .nav-menu {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
-    gap: 1.5rem;
-
-    // li:nth-child(1) a {
-    //   border-bottom: 2px solid white;
-    // }
-
-    .nav-link {
-      text-decoration: none;
-      font-size: 0.9rem;
-      color: var(--link-white);
-      transition: all 0.2s;
-      padding-inline: 3px;
-      padding-block: 2px;
-
-      &:hover {
-        transition: all 0.2s;
-        background-color: rgba(128, 128, 128, 0.774);
-        border-radius: 3px;
-      }
-    }
-  }
-
-  /* DROPDOWN */
-  .more-dropdown {
-    position: relative;
-    margin-left: 1rem;
-
-    .more-btn {
-      background: rgba(255, 255, 255, 0.15);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      color: var(--link-white);
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: 45px;
-      right: 0;
-      background: white;
-      width: 200px;
-      border-radius: 6px;
-      display: none;
-
-      &.active {
-        display: block;
-      }
-
-      .dropdown-item {
-        display: block;
-        padding: 0.7rem 1rem;
-        color: black;
-        text-decoration: none;
-        transition: all 0.2s;
-
-        &:hover {
-          transition: all 0.2s;
-          background-color: rgba(128, 128, 128, 0.774);
-        }
-      }
+    &:hover {
+      opacity: 0.6;
     }
   }
 
@@ -105,14 +44,17 @@
   .hamburger {
     display: none;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
     margin-left: auto;
     cursor: pointer;
+    padding: 5px;
 
     span {
-      width: 25px;
-      height: 3px;
-      background: white;
+      width: 22px;
+      height: 2px;
+      background: #000;
+      border-radius: 1px;
+      transition: all 0.3s ease;
     }
   }
 }
@@ -133,37 +75,46 @@
 }
 .close-button {
   background: none;
-  color: white;
-  font-size: 24px;
+  color: #000;
+  font-size: 28px;
   border: none;
   cursor: pointer;
   align-self: flex-end;
-  margin: 10px;
-  padding-right: 10px;
+  margin: 15px 20px;
+  padding: 0;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
-/* Fixed mobile menu */
+/* Fixed mobile menu - APPLE STYLE */
 .mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh; /* full screen height */
-  background-color: #333;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.98);
   display: none;
   flex-direction: column;
-  overflow-y: auto; /* allow scrolling inside menu */
-  z-index: 1000;
-  padding-top: 3px; /* space for the toggle button */
+  overflow-y: auto;
+  z-index: 999;
+  padding-top: 10px;
+  backdrop-filter: blur(30px);
 }
 
 .mobile-item {
-  padding: 15px;
-  color: white;
+  padding: 16px 20px;
+  color: #000;
   text-decoration: none;
-  border-bottom: 1px solid #444;
-}
+  border-bottom: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-color 0.2s ease;
 
-.mobile-item:hover {
-  background-color: #555;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 }
 
 /* Show menu with animation */
@@ -186,10 +137,7 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar {
-    .nav-menu,
-    .more-dropdown {
-      display: none;
-    }
+    justify-content: space-between;
 
     .hamburger {
       display: flex;
@@ -277,6 +225,126 @@ footer {
       }
       & .rightsicon {
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/* CODE EDITOR - INTERACTIVE THEME */
+.code-editor {
+  width: 100%;
+  // max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .editor-header {
+    background: #2d2d2d;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    .editor-controls {
+      display: flex;
+      gap: 8px;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        &.red { background: #ff5f56; }
+        &.yellow { background: #ffbd2e; }
+        &.green { background: #27c93f; }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .editor-title {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: 'Space Mono', monospace;
+      margin-left: auto;
+    }
+  }
+
+  .editor-content {
+    padding: 20px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d4d4d4;
+    overflow-x: auto;
+
+    .code-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: background-color 0.2s;
+      padding: 2px 8px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      .line-num {
+        color: rgba(255, 255, 255, 0.3);
+        min-width: 30px;
+        text-align: right;
+        user-select: none;
+      }
+
+      .keyword {
+        color: #569cd6;
+      }
+
+      .variable {
+        color: #9cdcfe;
+      }
+
+      .operator {
+        color: #d4d4d4;
+      }
+
+      .object {
+        color: #d4d4d4;
+      }
+
+      .semicolon {
+        color: #d4d4d4;
+      }
+
+      .comma {
+        color: #d4d4d4;
+      }
+
+      .property {
+        color: #9cdcfe;
+      }
+
+      .string {
+        color: #ce9178;
+      }
+
+      .array {
+        color: #d4d4d4;
       }
     }
   }

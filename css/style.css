@@ -28,8 +28,9 @@
   --nav-icon-bg: rgb(255, 255, 255);
 }
 
-.navbar .nav-menu li:nth-child(1) a {
-  border-bottom: 2px solid white;
+.navbar .brand {
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 :root {
@@ -195,11 +196,11 @@ body::before {
 main {
   width: 90%;
   max-width: 700px;
-  margin-top: 150px;
+  margin-top: 60px;
 }
 @media (width <= 425px) {
   main {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 
@@ -290,35 +291,6 @@ main {
   background-color: white;
   transition: ease-in-out 0.3s;
   color: black;
-}
-
-.myself {
-  z-index: 2;
-  border-block: gray 1px solid;
-  position: relative;
-  position: relative;
-}
-.myself::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 1px;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
-}
-.myself::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 1px;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
 }
 
 .myself-cont {

@@ -1,11 +1,11 @@
 // Load header
-fetch("/src/Reuse/header.html")
-  .then((res) => res.text())
-  .then((html) => {
-    document.getElementById("header").innerHTML = html;
+// fetch("/src/Reuse/header.html")
+//   .then((res) => res.text())
+//   .then((html) => {
+//     document.getElementById("header").innerHTML = html;
 
-    initHeaderScripts();
-  });
+//     initHeaderScripts();
+//   });
 
 // Load footer
 fetch("/src/Reuse/footer.html")

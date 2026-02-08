@@ -189,10 +189,10 @@ body::before {
 main {
   width: 90%;
   max-width: 700px;
-  margin-top: 150px;
+  margin-top: 60px;
 
   @media (width <= 425px  ) {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 }
 .container1 {
@@ -279,12 +279,9 @@ main {
   }
 }
 
-.myself {
-  z-index: 2;
-  border-block: gray 1px solid;
-  @include border-left-style(white, 1px);
-  @include border-right-style(white, 1px);
-}
+// .myself {
+//   z-index: 2;
+// }
 .myself-cont {
   display: flex;
   justify-content: center;

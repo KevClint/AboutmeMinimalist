@@ -1,6 +1,7 @@
 @import "root";
 
-// HEADER NAV - 
-.navbar .nav-menu li:nth-child(1) a {
-  border-bottom: 2px solid white;
+// Apple-style navbar refinements
+.navbar .brand {
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
